@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    { "id": "Start", "group": 1 },
+    { "id": "ProSupport", "group": 2 },
+    { "id": "DellMobility", "group": 2 },
+    { "id": "VOIPPOS", "group": 2 },
+    { "id": "EMR", "group": 3 },
+    { "id": "CanadaTechSupport", "group": 4 },
+    { "id": "DSPRouting", "group": 4 },
+    { "id": "GBL_ExtensionDialing", "group": 4 },
+    { "id": "Transfer", "group": 5 },
+    { "id": "Success", "group": 6 },
+    { "id": "Fail", "group": 7 }
+  ],
+  "links": [
+    { "source": "Start", "target": "ProSupport", "value": 8 },
+    { "source": "Start", "target": "DellMobility", "value": 1 },
+    { "source": "Start", "target": "VOIPPOS", "value": 1 },
+    { "source": "Start", "target": "DSPRouting", "value": 1 },
+    { "source": "Start", "target": "CanadaTechSupport", "value": 1 },
+    { "source": "Start", "target": "EMR", "value": 1 },
+    { "source": "Start", "target": "Transfer", "value": 1 },
+    { "source": "Start", "target": "Fail", "value": 1 },
+    { "source": "CanadaTechSupport", "target": "Transfer", "value": 1 },
+    { "source": "CanadaTechSupport", "target": "Fail", "value": 1 },
+    { "source": "DSPRouting", "target": "Transfer", "value": 1 },
+    { "source": "DSPRouting", "target": "Fail", "value": 1 },
+    { "source": "EMR", "target": "Transfer", "value": 1 },
+    { "source": "ProSupport", "target": "Transfer", "value": 8 },
+    { "source": "ProSupport", "target": "Fail", "value": 1 },
+    { "source": "ProSupport", "target": "GBL_ExtensionDialing", "value": 1 },
+    { "source": "DellMobility", "target": "Transfer", "value": 1 },
+    { "source": "DellMobility", "target": "GBL_ExtensionDialing", "value": 1 },
+    { "source": "DellMobility", "target": "Fail", "value": 1 },
+    { "source": "VOIPPOS", "target": "Transfer", "value": 1 },
+    { "source": "VOIPPOS", "target": "GBL_ExtensionDialing", "value": 1 },
+    { "source": "VOIPPOS", "target": "Fail", "value": 1 },
+    { "source": "GBL_ExtensionDialing", "target": "Transfer", "value": 1 },
+    { "source": "GBL_ExtensionDialing", "target": "Fail", "value": 1 },
+    { "source": "Transfer", "target": "Success", "value": 8 },
+    { "source": "Transfer", "target": "Fail", "value": 1 }
+  ]
+}
